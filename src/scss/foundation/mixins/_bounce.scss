@@ -1,0 +1,23 @@
+// 
+// @TODO: Add docs to bounce!
+//
+@mixin bounce() {
+  transform: scale(0, 0);
+
+  &.is-animated {
+    animation: bounce 0.6s 0.2s ease 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+// 
+// @TODO: Add docs to mixin-name!
+//
+@mixin before-bounce() {
+  transform: scale(0, 0);
+}
+
+@mixin after-bounce() {
+  animation: bounce 0.6s 0.2s ease 1;
+  animation-fill-mode: forwards;
+}

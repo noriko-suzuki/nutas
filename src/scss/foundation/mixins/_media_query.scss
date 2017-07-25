@@ -1,0 +1,78 @@
+$BREAK_POINT_SP:        800px;
+$BREAK_POINT_SP_320:    320px;
+$BREAK_POINT_PC_LARGE:  1300px;
+$BREAK_POINT_PC_MEDIUM: 1160px;
+$BREAK_POINT_PC_SMALL:  1040px;
+
+// @mixin pc($break-point: $BREAK_POINT_SP) {
+//   @media screen and (min-width: $break-point) {
+//     & {
+//       @content;  
+//     }
+//   }
+// }
+
+@mixin pc-large($break-point: $BREAK_POINT_PC_LARGE) {
+  @media screen and (max-width: $break-point) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin pc-medium($break-point: $BREAK_POINT_PC_MEDIUM) {
+  @media screen and (max-width: $break-point) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin pc-small($break-point: $BREAK_POINT_PC_SMALL) {
+  @media screen and (max-width: $break-point) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin sp($break-point: $BREAK_POINT_SP) {
+  @media screen and (max-width: $break-point) {
+    & {
+      @content;
+    }
+  }
+}
+
+
+@mixin sp-320($break-point: $BREAK_POINT_SP_320) {
+  @media screen and (max-width: $break-point) {
+    & {
+      @content;
+    }
+  }
+}
+
+// @mixin pc-large {
+//   @media screen and (min-width: $BREAK_POINT_PC_LARGE) {
+//     & {
+//       @content;
+//     }
+//   }
+// }
+
+// @mixin landscape {
+//   @media only screen and (orientation: landscape) {
+//     & {
+//       @content;
+//     }
+//   }
+// }
+
+// @mixin height870() {
+//   @media screen and (min-height: 870px) {
+//     & {
+//       @content;  
+//     }
+//   }
+// }

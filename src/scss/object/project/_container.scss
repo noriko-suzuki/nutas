@@ -1,0 +1,36 @@
+%p-container {
+  margin: auto;
+}
+
+.p-container {
+  @extend %p-container;
+  width: 1040px;
+}
+
+.p-container--large {
+  @extend %p-container;
+  width: 1160px;
+}
+
+@include pc-medium {
+  %p-container {
+    width: auto;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+@include sp {
+  %p-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+// .is-sp {
+//   .p-container {
+//     width: auto;
+//     padding-right: 30px;
+//     padding-left: 30px;
+//   }
+// }

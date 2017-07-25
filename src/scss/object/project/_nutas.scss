@@ -1,0 +1,72 @@
+.p-nutas {
+  display: flex;
+  padding: 50px 0;
+  align-items: center;
+  justify-content: center;
+  background: $color-nutas;
+}
+
+// .p-nutas__logo {
+
+// }
+
+.p-nutas__description {
+  padding: 0 0 0 50px;
+
+  > dt {
+    margin: 0 0 15px;
+    @include font-size(20);
+    font-weight: 700;
+  }
+
+  > dd {
+    @include font-size(14);
+    line-height: (26 / 14);
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+
+@include sp {
+  .p-nutas {
+    display: block;
+    padding: 40px 20px 35px;
+  }
+
+  .p-nutas__logo {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .p-nutas__description {
+    text-align: center;
+    padding-left: 0;
+
+    > dt {
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 0;
+      width: 210px;
+      height: 44px;
+      background: url(../img/nutas/sp/lead.png) 0 0 no-repeat;
+      background-size: cover;
+    }
+
+    > dd {
+      @include font-size(14);
+      line-height: (42 / 28);
+      text-align: left;
+
+      p {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

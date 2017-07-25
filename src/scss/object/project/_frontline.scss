@@ -1,0 +1,183 @@
+.p-frontline {
+  padding: 75px 60px 100px;
+  background: $color-white;
+}
+
+.p-frontline__header {
+  width: 610px;
+  margin: 0 auto 50px;
+
+  [data-comingsoon="true"] & {
+    margin-bottom: 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 142px;
+      height: 142px;
+      position: absolute;
+      top: 100px;
+      right: -140px;
+      background: url(../img/special/frontline/comingsoon/badge.png) 0 0 no-repeat;
+      @include before-transition;
+      transition-delay: 0.6s;
+    }
+  }
+
+  &.is-animated {
+    &::before {
+      @include after-transition;  
+    }
+  }
+}
+
+.p-frontline__heading {
+  width: 480px;
+  height: 200px;
+  margin: -10px auto 45px;
+  font-size: 0;
+  position: relative;
+  @include before-bounce;
+
+  .is-animated & {
+    @include after-bounce;
+  }
+
+  svg {
+    padding: 10px 0 0;
+  }
+}
+
+// .p-frontline__copy {
+//   width: 219px;
+//   height: 51px;
+//   background: url(../img/special/frontline/logo-interview-subcopy.svg) 0 0 no-repeat;
+//   position: absolute;
+//   top: 0;
+//   right: 15px;
+// }
+
+// .p-frontline__interview {
+//   width: 330px;
+//   height: 179px;
+//   background: url(../img/special/frontline/logo-interview.svg) 0 0 no-repeat;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+// }
+
+.p-frontline__lead {
+  line-height: (30 / 16);
+  letter-spacing: 0.05em;
+  @include before-transition;
+  transition-delay: 0.4s;
+
+  .is-animated & {
+    @include after-transition;
+  }
+}
+
+.p-frontline__list {
+  > li {
+    @include before-transition;
+  }
+
+  &.is-animated {
+    > li {
+      @include after-transition;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: ($i / 5) + 0.4s;
+        }
+      }
+    }
+    
+  }
+}
+
+// .p-frontline__badge {
+//   @include before-transition;
+//   transition-delay: 0.6s;
+
+//   .is-animated & {
+//     @include after-transition;
+//   }
+// }
+
+@include pc-small {
+  .p-frontline {
+    width: auto;
+  }
+}
+
+
+@include sp {
+  .p-frontline {
+    padding: 30px 25px 50px;
+
+    [data-comingsoon="true"] & {
+      padding-bottom: 30px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .p-frontline__header {
+    width: auto;
+    margin-bottom: 30px;
+
+    [data-comingsoon="true"] & {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .p-frontline__heading {
+    width: auto;
+    height: auto;
+    // padding-top: (224 / 330) * 100%;
+    padding-top: 0;
+    position: relative;
+    // width: 330px;
+    // height: 224px;
+
+    //width: 237px;
+    //height: 162px;
+    //margin-bottom: 30px;
+    width: 294px;
+    height: 150px;
+    margin-bottom: 5px;
+
+    svg {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+  }
+
+  // .p-frontline__copy {
+  //   width: 157px;
+  //   height: 38px;
+  //   top: 0;
+  //   right: 12px;
+  //   background-size: cover;
+  // }
+
+  // .p-frontline__interview {
+  //   width: 237px;
+  //   height: 129px;
+  //   background-size: cover;
+  // }
+
+  .p-frontline__lead {
+    line-height: (56 / 32);
+  }
+}

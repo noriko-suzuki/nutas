@@ -1,0 +1,16 @@
+.l-body {
+  // min-width: $size-min-width;
+}
+
+@include pc-small {
+  .l-body {
+    min-width: $size-min-width;
+  }  
+}
+
+@include sp {
+  .l-body {
+    min-width: 0;
+    overflow: hidden;
+  }
+}

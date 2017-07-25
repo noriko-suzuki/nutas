@@ -1,0 +1,144 @@
+.c-snsButton {
+  width: 72px;
+  height: 40px;
+  position: relative;
+  perspective: 200px;
+}
+
+.c-snsButton__front {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid $color-gray03;
+  color: $color-gray01;
+  font-family: $font-en;
+  @include font-size(10);
+  font-weight: 700;
+  transition: 
+    opacity 0.3s linear,
+    transform 0.8s $easeOutExpo,
+    color 0.2s linear,
+    border-color 0.2s linear;
+  cursor: pointer;
+  z-index: 2;
+
+  > span {
+    display: inline-block;
+    padding: 0 0 0 18px;
+    position: relative;
+    letter-spacing: 0.1em;
+  }
+
+  i {
+    height: 18px;
+    @include font-size(18);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .c-snsButton:hover &,
+  .is-ie & {
+    transform: rotateX(-180deg);
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .is-section-about & {
+    border-color: $color-white;
+    color: $color-white;
+  }
+}
+
+%c-snsButton__back {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-white;
+  font-family: $font-en;
+  @include font-size(10);
+  font-weight: 700;
+  transform: rotateX(180deg);
+  opacity: 0;
+  transition: 
+    opacity 0.3s linear,
+    transform 0.8s $easeOutExpo;
+  z-index: 1;
+
+  > span {
+    display: inline-block;
+    padding: 0 0 0 18px;
+    position: relative;
+  }
+
+  i {
+    height: 16px;
+    @include font-size(16);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .c-snsButton:hover &,
+  .is-ie &,
+  &:hover {
+    transform: rotateX(0deg);
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.c-snsButton__back--like {
+  @extend %c-snsButton__back;
+
+  iframe {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.c-snsButton__back--share {
+  @extend %c-snsButton__back;
+  background-color: $color-facebook;
+}
+
+.c-snsButton__back--twitter {
+  @extend %c-snsButton__back;
+  background-color: $color-twitter;
+}
+
+// .is-sp {
+//   .c-snsButton__front {
+//     display: none;
+//   }
+
+//   %c-snsButton__back {
+//     transform: rotate(0deg);
+//     opacity: 1;
+//   }
+// }
+
+.is-sns-visible {
+  .c-snsButton__front {
+    display: none;
+  }
+
+  %c-snsButton__back {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}

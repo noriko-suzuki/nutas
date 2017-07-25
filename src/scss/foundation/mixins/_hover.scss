@@ -1,0 +1,11 @@
+// 
+// mouseoverで透明度変更
+// @param {Number} $alpha 少数
+// 
+@mixin hover($alpha: .8) {
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: $alpha;
+  }
+}

@@ -1,0 +1,245 @@
+$underlayers: (
+  'recipe': $color-special01, 
+  'frontline': $color-special02,
+  'award': $color-event01,
+  'wonder': $color-event02
+);
+
+.l-header {
+  width: 100%;
+  height: 106px;
+  transition: 
+    border-color 0.2s linear,
+    background-color 0.2s linear,
+    transform 0.6s $easeOutExpo;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zIndex-header;
+  @include clearfix;
+  transition-delay: 0s;
+  transform: translate3d(0, -100%, 0);
+
+  &:hover {
+    border-color: #e8e7e7;
+    background: $color-white;
+  }
+
+  .is-index-hidden & {
+    transition: 
+      border-color 0.2s linear,
+      background-color 0.2s linear,
+      transform 0.6s $easeOutExpo 0.4s;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.l-header__heading {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  z-index: 2;
+}
+
+.l-header__logo {
+  width: 120px;
+  height: 53px;
+  background: url(../img/common/header/logo.svg) 0 0 no-repeat;
+  font-size: 0;
+}
+
+.l-header__navigation {
+  display: flex;
+  padding: 0 15px 0 0;
+  float: right;
+  position: relative;
+  z-index: 1;
+
+  > li {
+    display: flex;
+    height: 106px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+
+    > a {
+      display: inline-block;
+      padding: 0 0 15px;
+      position: relative;
+      font-weight: 700;
+      color: inherit;
+      line-height: 1;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $color-black;
+        transform-origin: 0 0;
+        transform: scaleX(0);
+        transition: transform 0.4s $easeOutExpo;
+      }
+
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+@each $section in ['about', 'habit', 'special', 'event'] {
+  html[data-section="#{$section}"] {
+    li[data-id="#{$section}"] {
+      > a {
+        &::before {
+          transform: scaleX(1) !important;
+        }
+      }
+    }
+  }
+}
+
+.l-header__underlayers {
+  width: 100vw;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px 0 0;
+  background: $color-white;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: -1;
+  font-size: 0;
+  font-weight: 700;
+  text-align: right;
+  transform: translate3d(0, 0, 0);
+  transition: 
+    max-height 0.6s $easeOutCirc,
+    opacity 0.2s linear,
+    transform 0.6s $easeOutExpo;
+
+  li:hover & {
+    max-height: 70px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  > li {
+    display: inline-block;
+    padding: 30px 20px 15px;
+
+    > a {
+      display: inline-block;
+      padding: 0 0 13px;
+      position: relative;
+      @include font-size(14);
+      font-weight: 700;
+      color: inherit;
+      line-height: 1;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform-origin: 0 0;
+        transform: scaleX(0);
+        transition: transform 0.4s $easeOutExpo;
+      }
+
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+.js-underlayer-trigger:hover {
+  > a {
+    &::before {
+      transform: scaleX(1) !important;
+    }
+  }
+}
+
+@each $key, $value in $underlayers {
+  .l-header__underlayer--#{$key} {
+
+    &::before {
+      background: $value;
+    }
+
+    &:hover {
+      color: $value;
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.l-header__hamburger {
+  display: none;
+}
+
+
+@include sp {
+  .l-header {
+    height: 65px;
+    background: $color-white;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  .l-header__navigation {
+    display: none;
+  }
+
+  .l-header__heading {
+    width: 88px;
+    height: 38px;
+    margin: 10px auto 0;
+    position: static;
+  }
+
+  .l-header__logo {
+    width: 88px;
+    height: 38px;
+    background-size: cover;
+  }
+
+  .l-header__hamburger {
+    display: block;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    transition-delay: 0s;
+    transform: translate3d(0, -100%, 0);
+
+    .is-index-hidden & {
+      transition: 
+        border-color 0.2s linear,
+        background-color 0.2s linear,
+        transform 0.6s $easeOutExpo 0.4s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .is-commendation-visible & {
+      display: none;
+    }
+  }
+}

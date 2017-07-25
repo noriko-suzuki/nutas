@@ -1,0 +1,58 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "image": "gulp image"
+  },
+  "author": "Yosuke Sannohe",
+  "license": "ISC",
+  "devDependencies": {
+    "assemble": "^0.24.3",
+    "autoprefixer": "^7.1.1",
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.13.0",
+    "browserify": "^14.0.0",
+    "browserify-shim": "^3.8.12",
+    "cssnano": "^3.7.1",
+    "gulp": "^3.9.1",
+    "gulp-extname": "^0.2.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.8",
+    "handlebars-helpers": "^0.8.2",
+    "js-yaml": "^3.8.4",
+    "merge-stream": "^1.0.0",
+    "postcss-normalize": "^3.0.0",
+    "prettify": "^0.1.7",
+    "sass-glob-importer": "^1.0.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "awesome-sass-easing": "^1.1.2",
+    "emma.css": "^0.10.0",
+    "jquery-mousewheel": "^3.1.13",
+    "jquery-scrollify": "^1.0.14",
+    "lazysizes": "^4.0.0-rc3",
+    "lodash.debounce": "^4.0.8",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "preloader": "^4.0.1",
+    "waypoints": "^4.0.1"
+  }
+}

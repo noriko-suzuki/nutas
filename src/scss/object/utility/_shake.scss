@@ -1,0 +1,5 @@
+.u-shake {
+  display: block;
+  transform-origin: 50% 50%;
+  @include shake;
+}

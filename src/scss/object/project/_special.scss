@@ -1,0 +1,21 @@
+.p-special {}
+
+.p-special__inner {
+  background: url(../img/special/recipe/bg.jpg) 50% 100% no-repeat;
+  background-size: 100% auto;
+
+  [data-comingsoon="true"] & {
+    background-position: 50% 260px;
+  }
+}
+
+@include sp {
+  .p-special {
+    padding-top: 0;
+  }
+
+  .p-special__inner {
+    padding-top: 20px;
+    background: url(../img/special/recipe/sp/bg.jpg) 50% 50% repeat-y;
+  }
+}

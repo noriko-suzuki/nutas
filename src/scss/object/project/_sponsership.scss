@@ -1,0 +1,153 @@
+.p-sponsership {
+  padding: 100px 0;
+  position: relative;
+  background: $color-gray04;
+}
+
+%p-sponsership__sponsers {
+  text-align: center;
+
+  > dt {
+    display: inline-block;
+    min-width: 180px;
+    @include font-size(22);
+    line-height: 28px;
+    font-weight: 700;
+    vertical-align: top;
+    letter-spacing: 0.1em;
+    background: 
+      url(../img/sponsership/brace_left.png) 0 0 no-repeat,
+      url(../img/sponsership/brace_right.png) 100% 0 no-repeat;
+  }
+}
+
+.p-sponsership__sponsers--special {
+  @extend %p-sponsership__sponsers;
+
+  > dt {
+    margin-bottom: 50px;
+  }
+}
+
+.p-sponsership__sponsers {
+  @extend %p-sponsership__sponsers;
+
+  > dt {
+    margin-bottom: 40px;
+  }
+
+  > dd {
+    //height: 290px;
+    //overflow: auto;
+  }
+}
+
+.p-sponsership__logos {
+  margin: -40px -20px 80px;
+  font-size: 0;
+  text-align: center;
+
+  > li {
+    display: inline-block;
+    padding: 40px 20px 0;
+
+    @include before-transition;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        transition-delay: ($i / 10) + 0s;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.is-animated {
+    > li {
+      @include after-transition;
+
+      
+    }
+  }
+}
+
+.p-sponsership__names {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -30px 0 0;
+  padding: 0 35px;
+
+  > li {
+    width: (100% / 3);
+    padding: 30px 35px 0;
+    text-align: center;
+    line-height: (30 / 16);
+  }
+}
+
+.p-sponsership__item--1of3 {
+  width: (100% / 3);
+}
+
+
+@include sp {
+  .p-sponsership {
+    padding: 50px 0;
+  }
+
+  %p-sponsership__sponsers {
+    > dt {
+      min-width: 160px;
+      @include font-size(20);
+      line-height: 26px;
+      background-image: 
+        url(../img/sponsership/sp/brace_left.png),
+        url(../img/sponsership/sp/brace_right.png);
+      background-size: 8px 26px, 8px 26px;
+    }
+  }
+
+  .p-sponsership__sponsers--special {
+    > dt {
+      margin-bottom: 20px;
+    }
+  }
+
+  .p-sponsership__sponsers {
+    > dt {
+      margin-bottom: 30px;
+    }
+
+    > dd {
+      //height: 310px;
+    }
+  }
+
+  .p-sponsership__logos {
+    margin: -15px -8px 50px;
+
+    > li {
+      padding: 15px 8px 0;
+    }
+  }
+
+  .p-sponsership__item--1of3 {
+    width: (100% / 2);
+  }
+
+  .p-sponsership__names {
+    margin: -15px -12px 0;
+    padding: 0;
+
+    > li {
+      width: (100% / 2);
+      padding: 15px 12px 0;
+      text-align: left;
+      @include font-size(13);
+      line-height: (38 / 26);
+    }
+  }
+}

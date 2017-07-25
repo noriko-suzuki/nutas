@@ -1,0 +1,6 @@
+// 
+// @TODO: Add docs to shake!
+//
+@mixin shake() {
+  animation: shake 0.5s alternate infinite ease-in-out;
+}

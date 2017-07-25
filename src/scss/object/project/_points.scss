@@ -1,0 +1,98 @@
+.p-points {
+  width: 860px;
+  margin: auto;
+  padding: 0 0 40px;
+}
+
+.p-points__heading {
+  width: 246px;
+  height: 75px;
+  margin: 0 auto 35px;
+  position: relative;
+  background: url(../img/event/points/heading.png) 0 0 no-repeat;
+  font-size: 0;
+  @include before-bounce;
+
+  &::before {
+    content: '';
+    width: 129px;
+    height: 77px;
+    position: absolute;
+    top: -70px;
+    left: -46px;
+    background: url(../img/common/check.png) 0 0 no-repeat;
+    @include shake;
+  }
+
+  .is-animated & {
+    @include after-bounce;
+  }
+}
+
+.p-points__list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  > li {
+    width: 170px;
+    @include before-transition;
+    
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        transition-delay: ($i / 10) + 0.2s;
+      }
+    }
+  }
+
+  .is-animated & {
+    > li {
+      @include after-transition;  
+    }
+    
+  }
+}
+
+@include pc-small {
+  .p-points {
+    width: auto;
+    min-width: 800px;
+  }
+}
+
+@include sp {
+  .p-points {
+    min-width: 0;
+    padding-bottom: 30px;
+  }
+
+  .p-points__heading {
+    width: 226px;
+    height: 69px;
+    margin-bottom: 40px;
+    background-image: url(../img/event/points/sp/heading.png);
+    background-size: cover;
+
+    &::before {
+      width: 100px;
+      height: 60px;
+      top: -55px;
+      left: -25px;
+      background: url(../img/common/sp/check.png) 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .p-points__list {
+    display: block;
+
+    > li {
+      width: auto;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

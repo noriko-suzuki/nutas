@@ -1,0 +1,85 @@
+.c-hamburger {
+  display: none;
+  width: 65px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  position: absolute; // TODO: projectのほうで指定する
+  top: 0;
+  left: 0;
+  z-index: $zIndex-hamburger;
+}
+
+.c-hamburger--area {
+  @extend .c-hamburger;
+}
+
+.c-hamburger--commendation {
+  @extend .c-hamburger;
+}
+
+.c-hamburger__arrow {
+  display: block;
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+%c-hamburger__border {
+  display: block;
+  width: 28px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  background: $color-black;
+  transition: transform 0.3s $easeOutQuint;
+
+  .c-hamburger--area & {
+    background: #2b937e;
+  }
+}
+
+.c-hamburger__border--top {
+  @extend %c-hamburger__border;
+  top: 0;
+  transform-origin: 0 50%;
+
+  .is-navigation-open &,
+  .c-hamburger--area &,
+  .c-hamburger--commendation & {
+    transform: translate3d(0, 11px, 0) scaleX(0.5) rotate(-25deg);
+  }
+}
+
+.c-hamburger__border--middle {
+  @extend %c-hamburger__border;
+  top: 11px;
+  transform-origin: 100% 50%;
+  transform: scaleX((42 / 56));
+  transition-delay: 0.1s;
+
+  .is-navigation-open &,
+  .c-hamburger--area &,
+  .c-hamburger--commendation & {
+    transform: scaleX(1);
+  }
+}
+
+.c-hamburger__border--bottom {
+  @extend %c-hamburger__border;
+  top: 22px;
+  transform-origin: 0 50%;
+  transform: translate3d(0, 0, 0) scaleX(0) rotate(0deg);
+
+  .is-navigation-open &,
+  .c-hamburger--area &,
+  .c-hamburger--commendation & {
+    transform: translate3d(0, -11px, 0) scaleX(0.5) rotate(25deg);
+  }
+}
+
+@include sp {
+  .c-hamburger {
+    display: flex;
+  }
+}

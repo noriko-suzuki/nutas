@@ -1,0 +1,259 @@
+%p-prizeWinner {
+  width: 240px;
+  position: absolute;
+  @include before-transition;
+  
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      transition-delay: ($i / 5) + 0.8s;
+    }
+  }
+  
+
+  .is-animated & {
+    @include after-transition;
+  }
+}
+
+.p-prizeWinner--left {
+  @extend %p-prizeWinner;
+  top: -32px;
+  left: -96px;
+}
+
+.p-prizeWinner--right {
+  @extend %p-prizeWinner;
+  top: -22px;
+  right: -93px;
+}
+
+.p-prizeWinner--bottom {
+  @extend %p-prizeWinner;
+  right: 204px;
+  bottom: -78px;
+}
+
+%p-prizeWinner__prize {
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+.p-prizeWinner__prize--1 {
+  @extend %p-prizeWinner__prize;
+  width: 173px;
+  height: 68px;
+  background-image: url(../img/event/selection/prize_1.png);
+  top: -46px;
+}
+
+.p-prizeWinner__prize--2 {
+  @extend %p-prizeWinner__prize;
+  width: 138px;
+  height: 65px;
+  background-image: url(../img/event/selection/prize_2.png);
+  top: -43px;
+}
+
+.p-prizeWinner__prize--3 {
+  @extend %p-prizeWinner__prize;
+  width: 130px;
+  height: 66px;
+  background-image: url(../img/event/selection/prize_3.png);
+  top: -43px;
+}
+
+
+
+.p-prizeWinner__description {
+  position: absolute;
+
+  > dt {
+    display: inline-block;
+    padding: 0 0 10px;
+    margin: 0 0 15px;
+    border-bottom: 3px solid;
+    @include font-size(18);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+
+    b {
+      @include font-size(24);      
+    }
+  }
+
+  > dd {
+    width: 280px;
+    @include font-size(13);
+    line-height: (24 / 13);
+    clear: both;
+  }
+
+  .p-prizeWinner--left & {
+    top: 260px;
+    left: -60px;
+
+    > dt {
+      padding-right: 40px;
+    }
+  }
+
+  .p-prizeWinner--right & {
+    top: 260px;
+    right: -75px;
+
+    > dt {
+      padding-left: 40px;
+      float: right;
+    }
+  }
+
+  .p-prizeWinner--bottom & {
+    top: 150px;
+    left: -230px;
+
+    > dt {
+      padding-right: 40px;
+    }
+  }
+}
+
+@include pc-small {
+  .p-prizeWinner__description {
+
+    .p-prizeWinner--left & {
+      left: 0;
+    }
+
+    .p-prizeWinner--right & {
+      right: 0;
+    }
+  }
+}
+
+
+@include sp {
+  %p-prizeWinner {
+    width: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  %p-prizeWinner__prize {
+    top: 35px;
+    background-size: cover;
+  }
+
+  .p-prizeWinner__prize--1 {
+    width: 150px;
+    height: 54px;
+    background-image: url(../img/event/selection/sp/prize_1.png);
+    right: 162px;
+    left: auto;
+  }
+
+  .p-prizeWinner__prize--2 {
+    width: 131px;
+    height: 54px;
+    background-image: url(../img/event/selection/sp/prize_2.png);
+    right: auto;
+    left: 162px;
+  }
+
+  .p-prizeWinner__prize--3 {
+    width: 132px;
+    height: 54px;
+    background-image: url(../img/event/selection/sp/prize_3.png);
+    right: 162px;
+    left: auto;
+  }
+
+  .p-prizeWinner__image {
+    .p-prizeWinner--left &,
+    .p-prizeWinner--bottom & {
+      text-align: right;
+    }
+
+    img {
+      width: 180px;
+    }
+  }
+
+  .p-prizeWinner__description {
+    position: relative;
+    z-index: 1;
+    margin-top: -65px;
+
+    > dt {
+      padding-bottom: 15px;
+
+      b {
+        @include font-size(18);      
+      }
+    }
+
+    > dd {
+      width: auto;
+      @include font-size(14);
+      line-height: (48 / 28);
+    }
+
+    .p-prizeWinner--left & {
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+
+      > dt {
+        padding-right: 10px;
+      }
+
+      > dd {
+        padding-right: 35px;
+      }
+    }
+
+    .p-prizeWinner--right & {
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+
+      > dt {
+        padding-left: 10px;
+      }
+
+      > dd {
+        padding-left: 35px;
+      }
+    }
+
+    .p-prizeWinner--bottom & {
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+
+      > dt {
+        padding-right: 10px;
+      }
+
+      > dd {
+        padding-right: 35px;
+      }
+    }
+  }
+}

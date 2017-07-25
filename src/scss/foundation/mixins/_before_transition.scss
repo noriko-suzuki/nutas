@@ -1,0 +1,10 @@
+// 
+// @TODO: Add docs to before-transition!
+//
+@mixin before-transition() {
+  transition: 
+    opacity 0.6s linear,
+    transform 0.8s $easeOutExpo;
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+}

@@ -1,0 +1,243 @@
+opts:
+  is_comingsoon: true
+
+recipe:
+  - title: ジンジャーレモンウォーター
+    copy: 運動後に水分を摂る
+    image: 1.jpg
+    url: 'https://www.nutas.jp/category/id1679.html'
+  - title: スマイルなったまごはん
+    copy: よりよい眠りは朝ごはんから
+    image: 2.jpg
+    url: 'https://www.nutas.jp/category/id1678.html'
+  - title: これでもか薬味の冷ややっこ
+    copy: 塩分をカット。舌を意識する
+    image: 3.jpg
+    url: 'https://www.nutas.jp/category/id1680.html'
+
+interview:
+  - title: おいしさ・栄養・安心。3拍子揃った<br class="u-sp-hidden">野菜飲料開発の苦労とは
+    name: 1日分の野菜
+    company: 株式会社伊藤園
+    image: 01.jpg
+    url: 'https://www.nutas.jp/category/id1704.html'
+    small: false
+
+  - title: 管理栄養士も驚きの栄養素の密度。スーパーフルーツキウイの秘密
+    name: ゼスプリ・グリーンキウイ、<br>サンゴールドキウイ
+    company: ゼスプリ インターナショナル<br class="u-sp-block">ジャパン株式会社
+    image: 02.jpg
+    url: 'https://www.nutas.jp/category/id1705.html'
+    small: true
+
+  - title: 腸は栄養素を吸収する大切な器官！　乳酸菌習慣ですこやかな毎日を
+    name: ヤクルトシリーズ
+    company: 株式会社ヤクルト本社
+    image: 03.jpg
+    url: 'https://www.nutas.jp/category/id1706.html'
+    small: false
+
+  - title: 知っておきたい低栄養のこと。高齢でも筋肉を保ち元気になれる
+    name: 栄養ケア食品シリーズ
+    company: 味の素株式会社
+    image: 04.jpg
+    url: 'https://www.nutas.jp/category/id1707.html'
+    small: false
+
+  - title: 「大人にこそ飲んでほしい」牛乳は医学博士も認める優秀な栄養源
+    name: 牛乳
+    company: 一般社団法人 Jミルク
+    image: 05.jpg
+    url: 'https://www.nutas.jp/category/id1708.html'
+    small: false
+
+  - title: 超高齢社会の日本を救え。新しい介護<br class="u-sp-hidden">食品「スマイルケア食」とは
+    name: スマイルケア食
+    company: 農林水産省
+    image: 06.jpg
+    url: 'https://www.nutas.jp/category/id1709.html'
+    small: false
+
+events: 
+  target: '_blank'
+  prefectures: 
+    hokkaido:
+      name: '北海道'
+      url: 'https://www.nutas.jp/84day/id1686.html'
+    aomori:
+      name: '青森'
+      url: 'https://www.nutas.jp/84day/id1687.html'
+    iwate:
+      name: '岩手'
+      url: 'https://www.nutas.jp/84day/id1687.html#03'
+    miyagi:
+      name: '宮城'
+      url: 'https://www.nutas.jp/84day/id1687.html#04'
+    akita:
+      name: '秋田'
+      url: 'https://www.nutas.jp/84day/id1687.html#05'
+    yamagata:
+      name: '山形'
+      url: 'https://www.nutas.jp/84day/id1687.html#06'
+    fukushima:
+      name: '福島'
+      url: 'https://www.nutas.jp/84day/id1687.html#07'
+    ibaraki:
+      name: '茨城'
+      url: 'https://www.nutas.jp/84day/id1688.html'
+    tochigi:
+      name: '栃木'
+      url: 'https://www.nutas.jp/84day/id1688.html#09'
+    gunma:
+      name: '群馬'
+      url: 'https://www.nutas.jp/84day/id1688.html#10'
+    saitama:
+      name: '埼玉'
+      url: 'https://www.nutas.jp/84day/id1688.html#11'
+    chiba:
+      name: '千葉'
+      url: 'https://www.nutas.jp/84day/id1688.html#12'
+    tokyo:
+      name: '東京'
+      url: 'https://www.nutas.jp/84day/id1688.html#13'
+    kanagawa:
+      name: '神奈川'
+      url: 'https://www.nutas.jp/84day/id1688.html#14'
+    niigata:
+      name: '新潟'
+      url: 'https://www.nutas.jp/84day/id1689.html'
+    toyama:
+      name: '富山'
+      url: 'https://www.nutas.jp/84day/id1689.html#16'
+    ishikawa:
+      name: '石川'
+      url: 'https://www.nutas.jp/84day/id1689.html#17'
+    fukui:
+      name: '福井'
+      url: 'https://www.nutas.jp/84day/id1689.html#18'
+    yamanashi:
+      name: '山梨'
+      url: 'https://www.nutas.jp/84day/id1689.html#19'
+    nagano:
+      name: '長野'
+      url: 'https://www.nutas.jp/84day/id1689.html#20'
+    gihu:
+      name: '岐阜'
+      url: 'https://www.nutas.jp/84day/id1689.html#21'
+    shizuoka:
+      name: '静岡'
+      url: 'https://www.nutas.jp/84day/id1689.html#22'
+    aichi:
+      name: '愛知'
+      url: 'https://www.nutas.jp/84day/id1689.html#23'
+    mie:
+      name: '三重'
+      url: 'https://www.nutas.jp/84day/id1690.html'
+    shiga:
+      name: '滋賀'
+      url: 'https://www.nutas.jp/84day/id1690.html#25'
+    kyoto:
+      name: '京都'
+      url: 'https://www.nutas.jp/84day/id1690.html#26'
+    osaka:
+      name: '大阪'
+      url: 'https://www.nutas.jp/84day/id1690.html#27'
+    hyogo:
+      name: '兵庫'
+      url: 'https://www.nutas.jp/84day/id1690.html#28'
+    nara:
+      name: '奈良'
+      url: 'https://www.nutas.jp/84day/id1690.html#29'
+    wakayama:
+      name: '和歌山'
+      url: 'https://www.nutas.jp/84day/id1690.html#30'
+    tottori:
+      name: '鳥取'
+      url: 'https://www.nutas.jp/84day/id1691.html'
+    shimane:
+      name: '島根'
+      url: 'https://www.nutas.jp/84day/id1691.html#32'
+    okayama:
+      name: '岡山'
+      url: 'https://www.nutas.jp/84day/id1691.html#33'
+    hiroshima:
+      name: '広島'
+      url: 'https://www.nutas.jp/84day/id1691.html#34'
+    yamaguchi:
+      name: '山口'
+      url: 'https://www.nutas.jp/84day/id1691.html#35'
+    tokushima:
+      name: '徳島'
+      url: 'https://www.nutas.jp/84day/id1691.html#36'
+    kagawa:
+      name: '香川'
+      url: 'https://www.nutas.jp/84day/id1691.html#37'
+    ehime:
+      name: '愛媛'
+      url: 'https://www.nutas.jp/84day/id1691.html#38'
+    kochi:
+      name: '高知'
+      url: 'https://www.nutas.jp/84day/id1691.html#39'
+    fukuoka:
+      name: '福岡'
+      url: 'https://www.nutas.jp/84day/id1692.html'
+    saga:
+      name: '佐賀'
+      url: 'https://www.nutas.jp/84day/id1692.html#41'
+    nagasaki:
+      name: '長崎'
+      url: 'https://www.nutas.jp/84day/id1692.html#42'
+    kumamoto:
+      name: '熊本'
+      url: 'https://www.nutas.jp/84day/id1692.html#43'
+    oita:
+      name: '大分'
+      url: 'https://www.nutas.jp/84day/id1692.html#44'
+    miyazaki:
+      name: '宮崎'
+      url: 'https://www.nutas.jp/84day/id1692.html#45'
+    kagoshima:
+      name: '鹿児島'
+      url: 'https://www.nutas.jp/84day/id1692.html#46'
+    okinawa:
+      name: '沖縄'
+      url: 'https://www.nutas.jp/84day/id1692.html#47'
+
+
+
+sponsers: 
+  - アボット ジャパン株式会社
+  - 医歯薬出版株式会社
+  - 株式会社いわさき
+  - 株式会社エフ・エム・アイ
+  - 株式会社おいしい健康
+  - 大塚食品株式会社
+  - 大塚製薬株式会社
+  - 株式会社おぎそ
+  - カゴメ株式会社
+  - キユーピー株式会社
+  - 栗田興産株式会社
+  - 株式会社クリニコ
+  - 公益財団法人 食品流通構造改善促進機構
+  - 株式会社セイエンタプライズ
+  - SOMPOリスケアマネジメント株式会社
+  - 第一出版株式会社
+  - 株式会社タス
+  - 公益財団法人 ダノン健康栄養財団
+  - ダノンジャパン株式会社
+  - 東洋羽毛工業株式会社
+  - トーアス株式会社
+  - 株式会社ドーム
+  - 日清オイリオグループ株式会社
+  - 日本製粉株式会社
+  - NPC 日本印刷株式会社
+  - 日本水産株式会社
+  - 一般社団法人 日本能率協会
+  - ののじ株式会社
+  - ハウスウェルネスフーズ株式会社
+  - 長谷川化学工業株式会社
+  - 公益社団法人 米穀安定供給確保支援機構
+  - 株式会社ヘルシーネットワーク
+  - 株式会社明治
+  - 株式会社夢工房
+  - （順不同）

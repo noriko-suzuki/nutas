@@ -1,0 +1,33 @@
+.u-sp-inline {
+  display: none;
+}
+
+.u-sp-inline-block {
+  display: none;
+}
+
+.u-sp-block {
+  display: none;
+}
+
+.u-sp-hidden {
+
+}
+
+@include sp {
+  .u-sp-inline {
+    display: inline;
+  }
+
+  .u-sp-inline-block {
+    display: inline-block;
+  }
+
+  .u-sp-block {
+    display: block;
+  }
+  
+  .u-sp-hidden {
+    display: none;
+  }
+}

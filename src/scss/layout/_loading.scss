@@ -1,0 +1,44 @@
+.l-loading {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zIndex-loading;
+  transition: 
+    opacity 0.4s linear 1s,
+    height 0s linear 1.4s;
+
+  .is-loaded & {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+.l-loading__image {
+  position: relative;
+}
+
+.l-loading__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 0%;
+  transition: width 0.4s $easeOutQuint;
+}
+
+@include sp {
+  .l-loading__image {
+    img {
+      width: (317px * 0.6) !important;
+      height: (141px * 0.6) !important;
+    }
+  }
+}

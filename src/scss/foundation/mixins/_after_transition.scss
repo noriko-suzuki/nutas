@@ -1,0 +1,7 @@
+// 
+// @TODO: Add docs to after-transition!
+//
+@mixin after-transition() {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

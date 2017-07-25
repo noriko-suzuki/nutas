@@ -1,0 +1,253 @@
+---
+published: false
+---
+<!DOCTYPE html>
+<html data-section="">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>栄養の日・栄養週間｜たのしく食べる、カラダよろこぶ</title>
+  {{!-- <meta name="keywords" content="{{ keywords }}"> --}}
+  <meta name="description" content="新・栄養習慣はじまるーー2017年、日本栄養士会は8月4日を「栄養の日」、8月1日から7日を「栄養週間」に制定し、全国の管理栄養士・栄養士とともに、日本中のみなさんの「栄養を楽しむ」生活を応援します。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <meta property="og:site_name" content="栄養の日・栄養週間｜たのしく食べる、カラダよろこぶ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="栄養の日・栄養週間｜たのしく食べる、カラダよろこぶ" />
+  <meta property="og:description" content="新・栄養習慣はじまるーー2017年、日本栄養士会は8月4日を「栄養の日」、8月1日から7日を「栄養週間」に制定し、全国の管理栄養士・栄養士とともに、日本中のみなさんの「栄養を楽しむ」生活を応援します。" />
+  <meta property="og:url" content="https://www.nutas.jp/84/" />
+  <meta property="og:image" content="https://www.nutas.jp/84/img/assets/ogp.png">
+  <meta property="og:locale" content="ja_JP">
+  <link rel="stylesheet" href="{{ assets }}/css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400i,600i,700i" rel="stylesheet">
+  {{!-- <link rel="apple-touch-icon" href="{{ assets }}/img/touch-icon.png"> --}}
+  {{!-- <link rel="icon" href="{{ assets }}/img/favicon.png"> --}}
+</head>
+<body>
+  <div id="fb-root"></div>
+
+  <div class="js-body">
+    {{!-- loading --}}
+    <div class="l-loading">
+      <div class="l-loading__image">
+        <div class="l-loading__progress">
+          <img src="{{ assets }}/img/common/logo.svg" alt="" width="317" height="141">
+        </div>
+        <img src="{{ assets }}/img/common/logo-gray.svg" alt="" width="317" height="141">
+      </div>
+    </div>
+    {{!-- /loading --}}
+
+    {{!-- navigation sp --}}
+    <div class="l-navigation">
+      <div class="l-navigation__inner">
+        <div class="l-navigation__logo"></div>
+
+        {{> _navigation }}  
+      </div>
+      
+    </div>
+    {{!-- /navigation sp --}}
+
+    <div class="l-body">
+      {{> _header }}
+      
+      {% body %}
+      
+      {{> _footer }}
+      
+      {{!-- 右下固定のSNSボタン PC --}}
+      <dl class="p-sns is-sns-visible js-sns-action">
+        <dt>
+          <div>
+            <i class="icon-related"></i>
+            <span>Share</span>
+          </div>
+        </dt>
+        <dd>
+          <ul class="p-sns__list">
+            <li>
+              <div class="c-snsButton">
+                <div class="c-snsButton__front">
+                  <span>
+                    <i class="icon-facebook"></i> Like
+                  </span>
+                </div>
+                <div class="c-snsButton__back--like">
+                  <div class="fb-like" data-href="https://www.nutas.jp/84/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="c-snsButton">
+                <div class="c-snsButton__front">
+                  <span>
+                    <i class="icon-facebook"></i> Share
+                  </span>
+                </div>
+
+                <a href="http://www.facebook.com/share.php?u=https://www.nutas.jp/84/" class="c-snsButton__back--share" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                  <span>
+                    <i class="icon-facebook"></i> Share
+                  </span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="c-snsButton">
+                <div class="c-snsButton__front">
+                  <span>
+                    <i class="icon-twitter"></i> Tweet
+                  </span>
+                </div>
+                
+                <a href="http://twitter.com/intent/tweet?url=https://www.nutas.jp/84/&text={{encodeURI '栄養の日・栄養週間｜たのしく食べる、カラダよろこぶ' }}" class="c-snsButton__back--twitter" onclick="window.open(this.href, 'TWwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                  <span>
+                    <i class="icon-twitter"></i> Tweet
+                  </span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      {{!-- /右下固定のSNSボタン PC --}}
+      
+      {{!-- 右下固定のSNSボタン SP --}}
+      <dl class="p-sns--sp">
+        <dt class="js-sns">
+          <i class="icon-related"></i>
+        </dt>
+        <dd>
+          <ul class="p-sns--sp__list">
+            <li>
+              <div class="fb-like" data-href="https://www.nutas.jp/84/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+            </li>
+            <li>
+              <a href="http://www.facebook.com/share.php?u=https://www.nutas.jp/84/" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/intent/tweet?url=https://www.nutas.jp/84/&text={{encodeURI '栄養の日・栄養週間｜たのしく食べる、カラダよろこぶ' }}" onclick="window.open(this.href, 'TWwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://line.me/R/msg/text/?栄養の日・栄養週間｜たのしく食べる、カラダよろこぶ https://www.nutas.jp/84/">
+                <i class="icon-line"></i>
+              </a>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      {{!-- /右下固定のSNSボタン SP --}}
+
+      
+      {{!-- pagetopボタン --}}
+      <a href="#" class="c-pagetop js-pagetop">
+        <i class="icon-anchor_arrow c-pagetop__arrow"></i>
+      </a>
+      {{!-- /pagetopボタン --}}
+    </div>
+
+
+    {{!-- 表彰ポイント モーダル --}}
+    <div class="p-commendation">
+      <a href="#" class="c-hamburger--commendation p-commendation__hamburger js-point-trigger">
+        <span class="c-hamburger__arrow">
+          <span class="c-hamburger__border--top"></span>
+          <span class="c-hamburger__border--middle"></span>
+          <span class="c-hamburger__border--bottom"></span>
+        </span>
+      </a>
+
+      <div class="p-commendation__overlay js-point-trigger"></div>
+      <div class="p-commendation__container">
+        <div class="p-commendation__header">
+          <a href="#" class="p-commendation__close js-point-trigger">
+            <i class="icon-close"></i>
+          </a>  
+        </div>
+        
+
+        <dl class="p-commendation__content">
+          <dt>
+            <i class="icon-question"></i> 表彰ポイント
+          </dt>
+          <dd>
+            <dl class="p-commendation__description">
+              <dt><span class="p-commendation__title--betterLifeAward">Better Life Award</span></dt>
+              <dd>
+                ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。
+              </dd>
+              <dt><span class="p-commendation__title--84selection">84 Selection</span></dt>
+              <dd>
+                ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。ここに表彰ポイントが入ります。
+              </dd>
+            </dl>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    {{!-- /表彰ポイント モーダル --}}
+
+    {{!-- お近くの地域のイベントを見る SP --}}
+    <div class="l-area">
+      <a href="#" class="c-hamburger--area l-area__hamburger js-area-toggle">
+        <span class="c-hamburger__arrow">
+          <span class="c-hamburger__border--top"></span>
+          <span class="c-hamburger__border--middle"></span>
+          <span class="c-hamburger__border--bottom"></span>
+        </span>
+      </a>
+
+      <div class="l-area__content">
+        <p class="l-area__title">お近くの地域のイベントを見る</p>
+
+        <div class="l-area__pulldown">
+          <select class="l-area__select js-area-select">
+            <option value="">都道府県を選択してください</option>
+            {{#each config.events.prefectures}}
+              {{#with .}}
+              <option value="{{ url }}">{{ name }}</option>
+              {{/with}}
+            {{/each}}
+          </select>
+        </div>
+
+        <a href="#" class="l-area__button c-button--event js-area-trigger">
+          <i class="icon-arrow_right"></i>
+          <span>選択</span>
+        </a>
+      </div>
+    </div>
+    {{!-- /お近くの地域のイベントを見る SP --}}
+  </div>
+  
+  
+
+
+  <script src="{{ assets }}/js/build.min.js"></script>
+  
+  
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96098428-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

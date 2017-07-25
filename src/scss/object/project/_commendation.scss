@@ -1,0 +1,232 @@
+.p-commendation {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zIndex-commendation;
+  // background: rgba(#fff, 0.96);
+  transition: 
+    height 0s linear 0.4s,
+    opacity 0.2s linear;
+  
+  // 非表示にしておく
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  // height: 100%;
+  // opacity: 1;
+
+  .is-commendation-visible & {
+    height: 100%;
+    opacity: 1;
+    transition: 
+      height 0s linear,
+      opacity 0.2s linear;
+  }
+}
+
+.p-commendation__header {
+  width: 360px;
+  height: 136px;
+  margin: auto;
+  position: relative;
+}
+
+.p-commendation__overlay {
+  
+  width: 100%;
+  // height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(#fff, 0.96);
+  cursor: pointer;
+
+  // 非表示にしておく
+  height: 0;
+  opacity: 0;
+
+  transition: 
+    height 0s linear 0.4s,
+    opacity 0.2s linear;
+
+  .is-commendation-visible & {
+    height: 100%;
+    opacity: 1;
+    transition: 
+      height 0s linear,
+      opacity 0.2s linear;
+  }
+}
+
+.p-commendation__container {
+  width: 510px;
+  margin: auto;
+  position: relative;
+}
+
+.p-commendation__close {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -120px;
+  bottom: -25px;
+  background: url(../img/common/bg_trigger.png) 0 0 no-repeat;
+  color: inherit;
+  // @include shake;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/common/bg_trigger_hover.png) 0 0 no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+
+  i {
+    position: relative;
+    z-index: 1;
+    transform: scale(3);
+  }
+
+  &:hover {
+    color: $color-white;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.p-commendation__content {
+  margin: -25px 0 0;
+  text-align: center;
+
+  > dt {
+    display: inline-block;
+    margin: 0 0 60px;
+    padding: 0 0 0 30px;
+    position: relative;
+    @include font-size(22);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 0.05em;
+
+    .icon-question {
+      display: block;
+      height: 24px;
+      @include font-size(24);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+}
+
+.p-commendation__description {
+  > dt {
+    margin: 0 0 15px;
+    text-align: center;
+  }
+
+  > dd {
+    @include font-size(14);
+    line-height: (26 / 14);
+    text-align: left;
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+%p-commendation__title {
+  display: inline-block;
+  vertical-align: top;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+}
+
+.p-commendation__title--betterLifeAward {
+  @extend %p-commendation__title;
+  width: 224px;
+  height: 50px;
+  background-image: url(../img/commendation/logo-award.svg);
+}
+
+.p-commendation__title--84selection {
+  @extend %p-commendation__title;
+  width: 151px;
+  height: 46px;
+  background-image: url(../img/commendation/logo-84.svg);
+}
+
+.p-commendation__hamburger {
+  visibility: hidden;
+}
+
+@include sp {
+  .p-commendation {
+    position: fixed;
+    // height: 100%;
+    top: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .p-commendation__header {
+    display: none;
+  }
+
+  .p-commendation__container {
+    width: auto;
+    min-height: 101vh;
+    padding: 50px 15px 15px;
+  }
+
+  .p-commendation__close {
+    display: none;
+  }
+
+  .p-commendation__content {
+    margin-top: 0;
+
+    > dt {
+      margin-bottom: 30px;
+      @include font-size(19);
+    }
+
+    
+  }
+
+  .p-commendation__description {
+    > dd {
+      &:not(:last-of-type) {
+        padding-right: 10px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
+  .p-commendation__hamburger {
+    visibility: visible;
+    position: fixed;
+  }
+}

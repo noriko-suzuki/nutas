@@ -1,0 +1,103 @@
+.p-specialTalk {
+  display: flex;
+  width: 920px;
+  margin: auto;
+  padding: 40px 0 0;
+  border-top: 1px solid;
+}
+
+.p-specialTalk__text {
+  padding: 0 50px 0 10px;
+  flex-basis: 460px;
+}
+
+.p-specialTalk__heading {
+  width: 302px;
+  height: 117px;
+  margin: 0 auto 15px;
+  font-size: 0;
+  background: url(../img/event/special_talk/heading.png) 0 0 no-repeat;
+  @include bounce;
+}
+
+.p-specialTalk__title {
+  margin: 0 0 10px;
+  @include font-size(20);
+  font-weight: 700;
+  line-height: (32 / 20);
+  letter-spacing: 0.05em;
+}
+
+.p-specialTalk__lead {
+  @include font-size(13);
+  line-height: (24 / 13);
+  letter-spacing: 0.05em;
+}
+
+.p-specialTalk__image {
+  flex-basis: 420px;
+  position: relative;
+}
+
+.p-specialTalk__button {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+}
+
+
+@include sp {
+  .p-specialTalk {
+    // display: flex;
+    width: auto;
+    padding-top: 53px;
+    padding-bottom: 70px;
+    border-top: none;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .p-specialTalk__text {
+    
+    padding: 0;
+    flex-basis: 0;
+    order: 2;
+  }
+
+  .p-specialTalk__image {
+    margin-bottom: 20px;
+    flex-basis: 0;
+    order: 1;
+    position: static;
+    text-align: center;
+  }
+
+  .p-specialTalk__heading {
+    width: 230px;
+    height: 89px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 0;
+    background-image: url(../img/event/special_talk/sp/heading.png);
+    background-size: cover;
+  }
+
+  .p-specialTalk__title {
+    @include font-size(18);
+    line-height: (63 / 36);
+  }
+
+  .p-specialTalk__lead {
+    @include font-size(16);
+    line-height: (56 / 32);
+  }
+
+  .p-specialTalk__button {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+}

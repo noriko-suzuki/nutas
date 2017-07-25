@@ -1,0 +1,137 @@
+.p-about {
+  height: 100vh;
+  // min-width: $size-min-width;
+  min-height: $size-min-height;
+  padding: 150px 570px 0 60px;
+  position: relative;
+}
+
+@include pc-small {
+  .p-about {
+    padding-right: 60px;
+  }
+}
+
+.p-about__heading {
+  width: 423px;
+  height: 86px;
+  margin: 0 0 45px;
+  background: url(../img/about/heading.png) 0 0 no-repeat;
+  font-size: 0;
+  @include before-bounce;
+
+  .is-animated & {
+    @include after-bounce;
+  }
+}
+
+.p-about__image {
+  width: 510px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 6%;
+  z-index: 0;
+  background: url(../img/about/image.jpg) 50% 50% no-repeat;
+  background-size: 510px 768px;
+}
+
+@include pc-large {
+  .p-about__image {
+    right: 0%;
+  }
+}
+
+.p-about__lead {
+  width: 600px;
+  height: 76px;
+  margin: 0 0 30px;
+  position: relative;
+  z-index: 1;
+  background: url(../img/about/lead.png) 0 0 no-repeat;
+  font-size: 0;
+}
+
+.p-about__text {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+  line-height: (30 / 16);
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+@include pc-medium {
+  .p-about__lead {
+    width: 480px;
+    height: 61px;
+    background-image: url(../img/about/lead_small.png);
+    background-size: cover;
+  }
+  .p-about__text {
+    width: 480px;
+  }
+}
+
+
+
+
+@include sp {
+  .p-about {
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    padding: 20px 15px 40px;
+  }
+
+  .p-about__heading {
+    width: 240px;
+    height: 50px;
+    margin: 0 10px 0;
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/about/sp/heading.png);
+    background-size: cover;
+  }
+
+  .p-about__image {
+    width: auto;
+    height: auto;
+    padding-top: (690 / 690) * 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    background-image: url(../img/about/sp/image.png);
+    background-size: cover;
+  }
+
+  .p-about__lead {
+    width: auto;
+    height: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    background: transparent;
+    @include font-size(21);
+    font-weight: 700;
+    line-height: (70 / 42);
+  }
+
+  .p-about__text {
+    width: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: (56 / 32);
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

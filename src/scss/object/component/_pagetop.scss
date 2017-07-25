@@ -1,0 +1,36 @@
+.c-pagetop {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background: $color-white;
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  z-index: $zIndex-pagetop;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  transition: transform 0.6s $easeOutExpo 0.1s;
+  transform: translate3d(100%, 0, 0);
+
+  .is-index-hidden & {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.c-pagetop__arrow {
+  font-size: 32px;
+  transform: scaleY(-1);
+  transition: transform 0.4s $easeOutExpo;
+
+  .c-pagetop:hover & {
+    transform: scaleY(-1) translate3d(0, 3px, 0);
+  }
+}
+
+
+@include sp {
+  .c-pagetop {
+    display: none;
+  }
+}

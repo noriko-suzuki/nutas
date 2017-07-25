@@ -1,0 +1,62 @@
+.p-comingsoon {
+
+}
+
+%p-comingsoon__lead {
+  margin: 40px auto 30px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    display: none;
+  }
+}
+
+.p-comingsoon__lead--award {
+  @extend %p-comingsoon__lead;
+  width: 489px;
+  height: 70px;
+  background-image: url(../img/event/comingsoon/lead.png);
+}
+
+.p-comingsoon__lead--wonder {
+  @extend %p-comingsoon__lead;
+  width: 573px;
+  height: 72px;
+  background-image: url(../img/event/wonder/comingsoon/lead.png);
+}
+
+.p-comingsoon__badge {
+  display: none;
+}
+
+@include sp {
+  .p-comingsoon__badge {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 0;
+  }
+
+  %p-comingsoon__lead {
+    margin: 25px auto;
+    background: transparent !important;
+
+    img {
+      display: block;
+    }
+  }
+
+  .p-comingsoon__lead--award {
+    width: auto;
+    height: auto;
+    max-width: 285px;
+  }
+
+  .p-comingsoon__lead--wonder {
+    width: auto;
+    height: auto;
+    max-width: 288px;
+  }
+}

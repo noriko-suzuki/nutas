@@ -1,0 +1,226 @@
+%c-point {
+  padding: 85px 0 0 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 122px;
+    height: 66px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.c-point--1 {
+  @extend %c-point;
+
+  &::before {
+    background-image: url(../img/event/points/1.png);
+  }
+}
+
+.c-point--2 {
+  @extend %c-point;
+  padding-bottom: 20px;
+
+  &::before {
+    background-image: url(../img/event/points/2.png);
+  }
+
+  &::after {
+    width: 71px;
+    height: 116px;
+    right: 3px;
+    bottom: 28px;
+    background-image: url(../img/event/points/bg_2.png);
+  }
+}
+
+.c-point--3 {
+  @extend %c-point;
+
+  &::before {
+    background-image: url(../img/event/points/3.png);
+  }
+
+  &::after {
+    width: 79px;
+    height: 57px;
+    right: -40px;
+    bottom: 15px;
+    background-image: url(../img/event/points/bg_3.png);
+  }
+}
+
+.c-point--4 {
+  @extend %c-point;
+  padding-bottom: 20px;
+
+  &::before {
+    background-image: url(../img/event/points/4.png);
+  }
+
+  &::after {
+    width: 39px;
+    height: 45px;
+    left: -35px;
+    bottom: 66px;
+    background-image: url(../img/event/points/bg_4.png);
+  }
+}
+
+.c-point__description {
+  height: 290px;
+
+  > dt {
+    font-size: 0;
+  }
+
+  > dd {
+    padding: 0 90px 0 0;
+    position: relative;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    @include font-size(13);
+    line-height: (24 / 13);
+
+    &::before {
+      content: '';
+      width: 75px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .c-point--#{$i} & {
+      > dd {
+        &::before {
+          background-image: url(../img/event/points/title_#{$i}.png);
+        }
+      }
+    }
+  }
+}
+
+
+@include sp {
+  %c-point {
+    padding-top: 0;
+    padding-right: 15px;
+    padding-left: 60px;
+
+    &::before {
+      width: 44px;
+      height: 109px;
+      top: 0;
+      right: auto;
+      left: 0;
+      background-size: cover;
+    }
+
+    &::after {
+      background-size: cover;
+    }
+  }
+
+  .c-point--1 {
+    &::before {
+      background-image: url(../img/event/points/sp/1.png);
+    }
+  }
+
+  .c-point--2 {
+    padding-bottom: 0;
+
+    &::before {
+      background-image: url(../img/event/points/sp/2.png);
+    }
+
+    &::after {
+      width: 40px;
+      height: 66px;
+      right: 0;
+      bottom: -45px;
+      background-image: url(../img/event/points/sp/bg_2.png);
+    }
+  }
+
+  .c-point--3 {
+    &::before {
+      background-image: url(../img/event/points/sp/3.png);
+    }
+
+    &::after {
+      width: 46px;
+      height: 33px;
+      right: 18px;
+      bottom: -23px;
+      background-image: url(../img/event/points/sp/bg_3.png);
+    }
+  }
+
+  .c-point--4 {
+    padding-bottom: 0;
+
+    &::before {
+      background-image: url(../img/event/points/sp/4.png);
+    }
+
+    &::after {
+      width: 26px;
+      height: 30px;
+      left: auto;
+      right: 2px;
+      bottom: -25px;
+      background-image: url(../img/event/points/sp/bg_4.png);
+    }
+  }
+
+  .c-point__description {
+    height: auto;
+
+    > dt {
+      span {
+        display: block;
+        margin-bottom: 5px;
+        @include font-size(13);
+        opacity: 0.8;
+      }
+
+      em {
+        display: block;
+        margin-bottom: 10px;
+        @include font-size(18);
+        font-weight: 700;
+        line-height: (52 / 36);
+      }
+    }
+
+    > dd {
+      padding-right: 0;
+      writing-mode: horizontal-tb;
+      line-height: (46 / 26);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

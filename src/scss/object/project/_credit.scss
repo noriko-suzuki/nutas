@@ -1,0 +1,66 @@
+.p-credit {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.p-credit__description {
+  display: table;
+  text-align: left;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  > dt {
+    display: table-cell;
+    width: 60px;
+    vertical-align: middle;
+    border-right: 3px solid $color-gray03;
+    font-weight: 700;
+  }
+
+  > dd {
+    padding: 5px 0 5px 30px;
+  }
+}
+
+.p-credit__support {
+  @include font-size(14);
+  line-height: (28 / 14);
+}
+
+
+@include sp {
+  .p-credit {
+    padding: 50px 0;
+    text-align: left;
+  }
+
+  .p-credit__description {
+    display: block;
+    padding: 15px 5px;
+    border-bottom: 1px solid $color-gray03;
+
+    &:first-child {
+      border-top: 1px solid $color-gray03;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    > dt {
+      display: block;
+      width: auto;
+      margin-bottom: 10px;
+      border-right: 0;
+      @include font-size(15);
+    }
+
+    > dd {
+      padding: 0;
+      @include font-size(14);
+      line-height: (42 / 28);
+    }
+  }
+}

@@ -1,0 +1,110 @@
+---
+published: false
+---
+<div class="js-scrollify" data-section-name="special">
+  <section class="p-section p-special js-section" id="special" data-prev="habit">
+    <div class="p-special__inner">
+      <div class="p-container--large">
+        <div class="p-section__header js-waypoint">
+          <h2 class="p-section__heading--special">スペシャル</h2>  
+        </div>
+        
+        
+        {{!-- レシピ --}}
+        <section class="p-recipe js-waypoint" id="recipe">
+          <div class="p-recipe__container">
+            <div class="p-recipe__header">
+              <h3 class="p-recipe__heading">
+                {{> _recipe_heading_svg }}
+                {{!-- <div class="p-recipe__badge">管理栄養士考案</div>
+                <div class="p-recipe__summer">夏の栄養習慣 おすすめレシピ</div> --}}
+              </h3>
+  
+              <p class="p-recipe__lead">
+                「栄養の日・栄養週間」にちなんで、この夏からはじめたい「新・栄養習慣」を実践するためのレシピを、人気管理栄養士・菱沼未央さんに考案していただきました。<br>
+よりよい眠りのための朝ごはん、運動後に飲みたいドリンク、塩分カットの工夫を凝らした冷ややっこと、いずれも簡単で、栄養面も優秀！　記事ではレシピと栄養ポイントをご紹介します。
+              </p>
+            </div>
+            
+            
+            <ul class="p-recipe__list">
+              {{#each config.recipe}}
+              <li>
+                <a href="{{ url }}" class="c-recipe" target="_blank">
+                  <div class="c-recipe__image">
+                    <img src="/assets/img/special/recipe/{{ image }}" alt="{{ title }}" class="u-fluid">
+  
+                    <div class="c-recipe__cover">
+                      <div class="c-recipe__more">記事を見る</div>  
+                    </div>
+                  </div>
+  
+                  <div class="c-recipe__text">
+                    <b class="c-recipe__copy">{{ copy }}</b>
+                    <p class="c-recipe__title">{{ title }}</p>  
+                  </div>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </section>
+        {{!-- /レシピ --}}
+      </div>
+    </div>
+    
+    
+    {{!-- 最前線 --}}
+    <div class="p-section__underlayer--frontline">
+      <section class="p-frontline" id="frontline" {{#if is_frontline_comingsoon}}data-comingsoon="true"{{/if}}>
+        <div class="p-frontline__header js-waypoint">
+          <h3 class="p-frontline__heading">
+            {{> _frontline_heading_svg }}
+
+            {{!-- <div class="p-frontline__copy">管理栄養士に聞く！</div>
+            <div class="p-frontline__interview">食の現場最前線！</div> --}}
+          </h3>
+  
+          <p class="p-frontline__lead">
+            毎日の暮らしを楽しくするヒントは、栄養にあり！　「新・栄養習慣」に取り入れたい食事・栄養のコツを、管理栄養士や、研究・商品開発の最前線で活躍する方にお伺いしました。
+          </p>
+  
+          {{#if is_frontline_comingsoon}}
+          <div class="p-comingsoon__badge">
+            <img src="/assets/img/special/frontline/sp/comingsoon/badge.png" alt="" class="u-fluid">
+          </div>
+          {{/if}}
+        </div>
+        
+        {{#unless is_frontline_comingsoon}}
+        <ol class="p-frontline__list js-waypoint">
+          {{#each config.interview}}
+          <li class="p-interview">
+            <a href="{{ url }}" trget="_blank">
+              <div class="p-interview__image">
+                <img src="/assets/img/special/frontline/{{ image }}" alt="{{ name }}" class="u-fluid">
+  
+                <div class="p-interview__cover">
+                  <div class="p-interview__more"><i></i> 記事を見る</div>  
+                </div>
+              </div>
+              <div class="p-interview__text">
+                <dl class="{{#unless small}}p-interview__description{{else}}p-interview__description--small{{/unless}}">
+                  <dt>{{add @index 1}}</dt>
+                  <dd>
+                    <div class="{{#unless small}}p-interview__name{{else}}p-interview__name--small{{/unless}}">{{{ name }}}</div>
+                    <div class="{{#unless small}}p-interview__company{{else}}p-interview__company--small{{/unless}}">{{{ company }}}</div>
+                  </dd>
+                </dl>
+                <p class="p-interview__title">{{{ title }}}</p>
+              </div>
+            </a>
+          </li>
+          {{/each}}
+        </ol>
+        {{/unless}}
+      </section>  
+    </div>
+    {{!-- /最前線 --}}
+  </section>
+</div>

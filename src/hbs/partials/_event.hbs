@@ -1,0 +1,320 @@
+---
+published: false
+---
+<section class="p-section p-event js-section" id="event" data-prev="special" {{#if is_award_comingsoon}}data-comingsoon="true"{{/if}}>
+  <div class="p-container--large">
+    <div class="p-section__header js-waypoint">
+      <h2 class="p-section__heading--event">イベント情報</h2>
+    </div>
+    
+    <section class="p-award" id="award">
+      <div class="p-award__header js-waypoint">
+        <h3 class="p-award__heading">
+          <img src="/assets/img/event/logo-award-selection.svg" alt="84 Award &amp; Selection">
+        </h3>
+
+        
+        {{#unless is_award_comingsoon}}
+        <button type="button" class="p-award__point js-point-trigger">
+          <span>表彰<br>ポイント</span>
+        </button>
+        {{/unless}}
+      </div>
+
+      <p class="p-award__title js-waypoint">
+        あの人の豊かな食生活、<br>
+        その秘訣とは？<br>
+        栄えある、第1回アワード発表！
+      </p>
+
+      {{#if is_award_comingsoon}}
+      <div class="p-comingsoon">
+        <p class="p-award__lead js-waypoint" style="margin-bottom: 0;">
+          「栄養の日・栄養週間」にちなんで、いまをイキイキと、健康で充実したライフスタイルを送る、著名人へ贈る賞をご用意しました。はたして、栄冠は誰の手に！？　豊かな人生を支える食生活について、その秘訣にも迫ります。<br>併せて、国民、地域の食生活や体づくりを支える管理栄養士・栄養士へ贈る賞も開設します。
+        </p>
+
+        <ul class="p-award__list js-waypoint">
+          <li>
+            <div class="p-award__prize">
+              <img data-src="/assets/img/event/selection/comingsoon/badge_1.png" alt="" class="p-award__badge lazyload">
+              <img data-src="/assets/img/event/selection/comingsoon/image_1.jpg" alt="" class="lazyload">
+              <p>
+                いまをイキイキと、健康で充実したライフスタイルを送る、著名人へ贈る賞
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="p-award__prize">
+              <img data-src="/assets/img/event/selection/comingsoon/badge_2.png" alt="" class="p-award__badge lazyload">
+              <img data-src="/assets/img/event/selection/comingsoon/image_2.jpg" alt="" class="lazyload">
+              <p>
+                国民、地域の食生活や体づくりを支える管理栄養士・栄養士へ贈る賞
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="p-comingsoon__badge">
+          <img data-src="/assets/img/event/comingsoon/sp/badge.png" alt="" class="u-fluid lazyload">
+        </div>
+      </div>
+      {{/if}}
+      
+      {{#unless is_award_comingsoon}}
+      <p class="p-award__lead js-waypoint">
+        「栄養の日・栄養週間」にちなんで、いまをイキイキと、健康で充実したライフスタイルを送る、著名人へ贈る賞「84（栄養）アワード」をご用意しました。はたして、栄冠は誰の手に！？　豊かな人生を支える食生活について、その秘訣にも迫ります。<br>
+併せて、国民、地域の食生活や体づくりを支える管理栄養士・栄養士へ贈る賞「84（栄養）セレクション」も開設します。
+      </p>
+      {{/unless}}
+      
+      
+      {{!-- Better Life Award --}}
+      {{#unless is_award_comingsoon}}
+      <section class="p-betterLifeAward js-waypoint">
+        <div class="p-betterLifeAward__image">
+          <div class="p-betterLifeAward__imageWrapper">
+            <h4 class="p-betterLifeAward__heading">84 Award</h4>
+
+            <img data-src="/assets/img/event/better_life_award/image.jpg" alt="谷原 章介さん" class="u-fluid lazyload">
+
+            <div class="p-betterLifeAward__name u-sp-block">
+              <b>谷原 章介</b>さん
+            </div>
+          </div>
+        </div>
+        <div class="p-betterLifeAward__text">
+          <div class="p-betterLifeAward__name u-sp-hidden">
+            <b>谷原 章介</b>さん
+          </div>
+
+          <p class="p-betterLifeAward__reason">
+            ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。選考理由が入ります。
+          </p>
+
+          <dl class="p-betterLifeAward__comment">
+            <dt>Comment</dt>
+            <dd>
+              続けられたのは本当にいろんな人の支えがあったからだと思います。周りのみなさんに助けられてきたなと、助けられてここまで来たかなと思います。助けられてここまで来たかなと思います。
+            </dd>
+          </dl>
+        </div>
+      </section>
+      {{/unless}}
+      {{!-- /Better Life Award --}}
+
+
+      {{!-- 84 Selection --}}
+      {{#unless is_award_comingsoon}}
+      <section class="p-selection js-waypoint">
+        <div class="p-selection__inner">
+          <div class="p-selection__header js-waypoint">
+            <p>日本中に元気を与える活動をしている方を</p>
+            <h4>84 Selection</h4>
+            <p>陰で支える管理栄養士・栄養士の方へ送る</p>
+
+            <div class="p-selection__image js-waypoint"></div>
+
+            <div class="p-selection__heading">
+              <img data-src="{{ assets }}/img/event/selection/sp/heading.png" alt="" class="u-fluid lazyload">
+            </div>
+
+            <svg version="1.1"
+               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+               x="0px" y="0px" width="678.7px" height="531.5px" viewBox="0 0 678.7 531.5" style="enable-background:new 0 0 678.7 531.5;"
+               xml:space="preserve" class="js-waypoint">
+            <defs>
+            </defs>
+            <polygon class="p-selection__triangle" points="2.9,82.8 675.9,1.8 375.9,528.8"/>
+            </svg>
+
+          </div>
+
+          <div class="js-waypoint">
+            <div class="p-prizeWinner--left">
+              <em class="p-prizeWinner__prize--1">84 Selection 日本栄養士会賞</em>
+              <div class="p-prizeWinner__image">
+                <img data-src="/assets/img/event/selection/image_1.jpg" alt="佐藤 幸子さん" class="lazyload">
+              </div>
+              <dl class="p-prizeWinner__description">
+                <dt><b>佐藤 幸子</b>さん</dt>
+                <dd>
+                  ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。選考理由が入ります。
+                </dd>
+              </dl>
+            </div>
+            
+            <div class="p-prizeWinner--right">
+              <em class="p-prizeWinner__prize--2">84 Selection ゼスプリ賞</em>
+              <div class="p-prizeWinner__image">
+                <img data-src="/assets/img/event/selection/image_2.jpg" alt="佐藤 幸子さん" class="lazyload">
+              </div>
+              <dl class="p-prizeWinner__description">
+                <dt><b>佐藤 幸子</b>さん</dt>
+                <dd>
+                  ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。選考理由が入ります。
+                </dd>
+              </dl>
+            </div>
+            
+            <div class="p-prizeWinner--bottom">
+              <em class="p-prizeWinner__prize--3">84 Selection 伊藤園賞</em>
+              <div class="p-prizeWinner__image">
+                <img data-src="/assets/img/event/selection/image_3.jpg" alt="佐藤 幸子さん" class="lazyload">
+              </div>
+              <dl class="p-prizeWinner__description">
+                <dt><b>佐藤 幸子</b>さん</dt>
+                <dd>
+                  ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。ここに選考理由が入ります。選考理由が入ります。
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+      {{/unless}}
+      {{!-- /84 Selection --}}
+
+      {{!-- Special Talk --}}
+      {{#unless is_award_comingsoon}}
+      <section class="p-specialTalk">
+        <div class="p-specialTalk__text">
+          <h4 class="p-specialTalk__heading js-waypoint">スペシャル対談</h4>
+          <p class="p-specialTalk__title">スポーツ選手の寿命を10年延ばす食事と体の関係は？</p>
+          <p class="p-specialTalk__lead">
+            「Better Life Award」に輝いた谷原さんと、「84 Selection」を受賞された佐藤さんのお二人に、「スポーツと食事の関係」について、お話をうかがってみました。
+          </p>  
+        </div>
+        <div class="p-specialTalk__image">
+          <img data-src="/assets/img/event/special_talk/image.jpg" alt="" class="u-fluid lazyload">
+          <a href="#" class="c-button--black p-specialTalk__button">
+            <i class="icon-arrow_right"></i><span>スペシャル対談を見る</span>
+          </a>
+        </div>
+      </section>
+      {{/unless}}
+      {{!-- /Special Talk --}}
+    </section>
+  </div>
+
+  <div class="p-section__underlayer--wonder">
+    {{!-- 栄養Wonder 2017  --}}
+    <section class="p-wonder" id="wonder">
+      <div class="js-waypoint">
+        <div class="p-wonder__header">
+          <h3 class="p-wonder__heading">栄養Wonder 2017</h3>
+        </div>
+        
+        <div class="p-wonder__title">
+          <b>管理栄養士・栄養士が</b><br>
+          <span class="u-kerning-half">「</span><em>栄養のたのしみ方</em>」<b>を</b><br class="u-sp-inline">ご提案！
+        </div>
+        
+        <p class="p-wonder__lead">
+          「栄養の日・栄養週間」は、「たのしく食べて、未来のワタシの笑顔をつくる、そのきっかけの日」として、全国の管理栄養士・栄養士が、「たのしい栄養」を提案、推奨する記念日です。期間中には、“栄養”に楽しく触れるイベント「栄養ワンダー2017」を全国各地で開催します。ご家族、友人、職場のみなさんをお誘いのうえ、ぜひ、ご参加ください！
+        </p>
+      </div>
+      
+
+      <section class="p-points js-waypoint">
+        <h4 class="p-points__heading">栄養ワンダー2017 4つのポイント</h4>
+
+        <ol class="p-points__list">
+          <li>
+            <div class="c-point--1">
+              <dl class="c-point__description">
+                <dt>
+                  <span>10万人の皆さんのお近くで</span>
+                  <em>全国およそ500か所でイベント開催！</em>
+                </dt>
+                <dd>
+                  会場ごとにオリジナルイベントをご用意し、お近くの地域でお待ちしています！
+                </dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <div class="c-point--2">
+              <dl class="c-point__description">
+                <dt>
+                  <span>管理栄養士監修</span>
+                  <em>特別メニューや無料の栄養相談も！</em>
+                </dt>
+                <dd>
+                  ほか、親子料理教室や栄養に関する講座を実施するイベント会場も！
+                </dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <div class="c-point--3">
+              <dl class="c-point__description">
+                <dt>
+                  <span>「栄養」をたのしむコツ満載！</span>
+                  <em>「栄養ワンダーブック」プレゼント</em>
+                </dt>
+                <dd>
+                  管理栄養士提案の「新・栄養習慣」アクションプランをご紹介します。
+                </dd>
+              </dl>
+            </div>
+          </li>
+          <li>
+            <div class="c-point--4">
+              <dl class="c-point__description">
+                <dt>
+                  <span>毎日の生活に取り入れたい</span>
+                  <em>キウイフルーツと野菜ジュースの特典</em>
+                </dt>
+                <dd>
+                  「栄養の日・栄養週間」協賛社によるうれしいサンプリングを手に入れるチャンス！
+                </dd>
+              </dl>
+            </div>
+          </li>
+        </ol>
+      </section>
+      
+
+      {{#unless is_wonder_comingsoon}}
+      <section class="p-map js-waypoint">
+        <div class="p-map__header">
+          <h4 class="p-map__heading">栄養ワンダー2017 イベント開催場所</h4>
+
+          <a href="https://www.nutas.jp/84day/id1693.html" class="c-button--event p-map__button" target="_blank">
+            <i class="icon-arrow_right"></i><span>全国のイベントを見る</span>
+          </a>
+        </div>
+        
+        <div class="p-map__map">
+          {{!-- 地図SVG --}}
+          {{> _map_svg }}
+          {{!-- /地図SVG --}}
+
+          <p>
+            <i class="icon-search"></i>
+            都道府県別のイベントをご覧の際は<br>日本地図をクリックしてください 
+          </p>
+        </div>
+
+        <ul class="p-map__buttons">
+          <li>
+            <a href="https://www.nutas.jp/84day/id1693.html" class="p-map__button--all" target="_blank">
+              <div>
+                <span>全国の<br>イベントを見る</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="p-map__button--near js-area-toggle">
+              <div>
+                <span>お近くの地域の<br>イベントを見る</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      {{/unless}}
+    </section>
+    {{!-- /栄養Wonder 2017 --}}
+  </div>
+</section>

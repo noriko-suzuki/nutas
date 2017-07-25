@@ -1,0 +1,9 @@
+.u-hover {
+  @include hover(0.8);
+}
+
+@include sp {
+  .u-hover {
+    @include hover(1);
+  }
+}

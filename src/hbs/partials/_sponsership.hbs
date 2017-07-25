@@ -1,0 +1,30 @@
+---
+published: false
+---
+<div class="p-sponsership">
+  <div class="p-container">
+    <dl class="p-sponsership__sponsers--special">
+      <dt>特別協賛</dt>
+      <dd>
+        <ul class="p-sponsership__logos js-waypoint">
+          <li><a href="http://www.itoen.co.jp/" target="_blank" class="u-hover"><img data-src="{{ assets }}/img/sponsership/sponsorship_itoen.png" alt="伊藤園" width="360" class="lazyload"></a></li>
+          <li><a href="https://www.zespri-jp.com/" target="_blank"><img data-src="{{ assets }}/img/sponsership/sponsorship_zespri.png" alt="Zespri" width="360" class="lazyload"></a></li>
+          <li class="p-sponsership__item--1of3"><a href="https://www.ajinomoto.co.jp/" target="_blank" class="u-hover"><img data-src="{{ assets }}/img/sponsership/sponsorship_ajinomoto.png" alt="AJINOMOTO" width="" class="lazyload"></a></li>
+          <li class="p-sponsership__item--1of3"><a href="https://www.j-milk.jp/" target="_blank" class="u-hover"><img data-src="{{ assets }}/img/sponsership/sponsorship_jmilk.png" alt="J-milk" width="" class="lazyload"></a></li>
+          <li class="p-sponsership__item--1of3"><a href="http://www.yakult.co.jp/" target="_blank" class="u-hover"><img data-src="{{ assets }}/img/sponsership/sponsorship_yakult.png" alt="Yakult" width="" class="lazyload"></a></li>
+        </ul>
+      </dd>
+    </dl>
+
+    <dl class="p-sponsership__sponsers">
+      <dt>協賛</dt>
+      <dd class="">
+        <ul class="p-sponsership__names">
+          {{#each config.sponsers}}
+          <li>{{{ . }}}</li>
+          {{/each}}
+        </ul>
+      </dd>
+    </dl>
+  </div>
+</div>

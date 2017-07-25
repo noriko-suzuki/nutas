@@ -1,0 +1,268 @@
+.p-habit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: $size-min-height;
+  position: relative;
+}
+
+%p-habit__cover {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+
+@for $i from 1 through 8 {
+  .p-habit__cover--#{$i} {
+    @extend %p-habit__cover;
+    background-image: url(../img/habit/detail/#{$i}/bg.jpg);
+
+    .p-habit.is-bg-visible[data-index="#{$i}"] & {
+      opacity: 0.7;
+    }
+  }
+}
+
+.p-habit__heading {
+  width: 535px;
+  height: 162px;
+  margin: 0 auto 70px;
+  position: relative;
+  font-size: 0;
+  @include before-bounce;
+
+  .is-animated & {
+    @include after-bounce;
+  }
+
+  svg {
+    padding: 5px 0 0;
+  }
+}
+
+.p-habit__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -50px 0 0;
+
+  > li {
+    width: 50%;
+    padding: 50px 30px 0;
+    transition: opacity 0.2s linear;
+
+    &.is-inactive {
+      
+      opacity: 0.3 !important;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    @include before-transition;
+  }
+
+  .is-animated & {
+    > li {
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          img {
+            @include after-transition;
+            transition-delay: ($i / 8) + 0.4s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.p-habit__spList {
+  display: none;
+}
+
+.p-habit__container {
+  margin: 0;
+}
+
+@include pc-medium {
+  .p-habit__container {
+    width: auto;
+  }
+
+  .p-habit__list {
+    margin-top: 30px;
+
+    > li {
+      padding-top: 30px;
+    }
+
+    img {
+      height: 36px;
+    }
+  }
+}
+
+%p-habit__image {
+  display: none;
+  padding-top: (330 / 750) * 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .p-habit__item:nth-child(odd) & {
+    margin-left: 100px;
+  }
+
+  .p-habit__item:nth-child(even) & {
+    margin-right: 100px;
+  }
+}
+
+@for $i from 1 through 8 {
+  .p-habit__image--#{$i} {
+    @extend %p-habit__image;
+    background-image: url(../img/habit/detail/sp/#{$i}/image.jpg);
+  }
+}
+
+
+@include sp {
+  .p-habit {
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  %p-habit__cover {
+    display: none;
+  }
+
+  .p-habit__heading {
+    width: auto;
+    height: auto;
+    max-width: 325px;
+    height: 101px;
+    padding-top: (101 / 325) * 100%;
+    margin-bottom: 35px;
+
+    svg {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+  }
+
+  .p-habit__list {
+    display: none;
+  }
+
+  .p-habit__spList {
+    display: block;
+  }
+
+  .p-habit__item {
+    position: relative;
+    @include before-transition;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        transition-delay: ($i / 10) + 0s;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+
+    .is-animated & {
+      @include after-transition;
+    }
+  }
+
+  .p-habit__content {
+    position: absolute;
+    top: 0;
+    
+    margin-top: -12px;
+
+    .p-habit__item:nth-child(odd) & {
+      padding-left: 25px;
+      left: 0;
+    }
+
+    .p-habit__item:nth-child(even) & {
+      padding-right: 25px;
+      right: 0;
+    }
+
+    img {
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+  }
+
+  %p-habit__image {
+    display: block;
+  }
+
+  .p-habit__button {
+    @include clearfix;
+  }
+
+  .p-habit__more {
+    display: flex;
+    width: 90px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    background: $color-black;
+    color: $color-white;
+    font-family: $font-en;
+    @include font-size(12);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+
+    .p-habit__item:nth-child(odd) & {
+      
+    }
+
+    .p-habit__item:nth-child(even) & {
+      float: right;
+    }
+
+    span {
+      display: inline-block;
+      padding-left: 16px;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: url(../img/habit/sp/plus.png) 0 0 no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}

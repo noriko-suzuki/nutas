@@ -1,0 +1,68 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  outline: none;
+}
+
+a:link {
+  text-decoration: none;
+  outline: none;
+}
+
+a:visited {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  outline: none;
+}
+
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+// ::selection {
+//   background: #dce3a0;
+// }
+
+// ::-moz-selection {
+//   background: #dce3a0;
+// }

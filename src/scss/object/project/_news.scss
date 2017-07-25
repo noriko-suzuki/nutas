@@ -1,0 +1,120 @@
+.p-news {
+  padding: 80px 0 120px;
+}
+
+.p-news__list {
+  width: 840px;
+  margin: 0 0 0 80px;
+
+  > li {
+    a {
+      display: block;
+      color: inherit;
+      transition: box-shadow 0.2s linear;
+
+      &:hover {
+        box-shadow: $shadow-default;
+      }
+    }
+  }
+}
+
+.p-news__item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+
+  > dt {
+    flex-basis: 123px;
+    flex-shrink: 0;
+    font-family: $font-en;
+    @include font-size(13);
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+
+  > dd {
+    padding: 5px 20px;
+    border-left: 3px solid $color-gray03;
+    @include font-size(18);
+    font-weight: 700;
+    line-height: (30 / 18);
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-news__button {
+  margin: 20px auto 80px;
+}
+
+.p-news__link {
+  width: 1000px;
+  margin: auto;
+}
+
+@include pc-medium {
+  .p-news__list {
+    width: auto;
+    margin-left: 0;
+  }
+}
+
+@include sp {
+  .p-news {
+    padding: 30px 0 50px;
+  }
+
+  .p-news__list {
+    width: auto;
+    margin-bottom: 0;
+
+    > li {
+      a {
+        display: block;
+        color: inherit;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .p-news__item {
+    display: block;
+    padding: 20px 5px;
+    border-top: 2px solid $color-gray03;
+
+    > dt {
+      margin-bottom: 15px;
+      @include font-size(12);
+      text-align: left;
+      line-height: 1;
+    }
+
+    > dd {
+      padding: 0;
+      border-left: 0;
+      @include font-size(15);
+      line-height: (44 / 30);
+    }
+  }
+
+  .p-news__button {
+    margin: 0 auto 30px;
+  }
+
+  .p-news__link {
+    display: block;
+    width: auto;
+    padding-top: (244 / 690) * 100%;
+    background: url(../img/news/sp/bnr_nutoritionist.png) 0 0 no-repeat;
+    background-size: cover;
+
+    img {
+      display: none;
+    }
+  }
+}

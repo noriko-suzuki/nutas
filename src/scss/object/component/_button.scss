@@ -1,0 +1,77 @@
+%c-button {
+  display: flex;
+  width: 300px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-weight: 700;
+  color: $color-white;
+  transition: background-color 0.2s linear;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  i {
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    margin: auto;
+    transform: scale(1.8);
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    transition: transform 0.4s $easeOutExpo;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);  
+    }
+  }
+}
+
+.c-button--black {
+  @extend %c-button;
+  background: $color-black;
+
+  &::before {
+    background: $color-gray01;
+  }
+}
+
+.c-button--event {
+  @extend %c-button;
+  padding-left: 20px;
+  background: $color-event02;
+
+  &::before {
+    background: #40ab95;
+  }
+}
+
+
+@include sp {
+  %c-button {
+    width: auto;
+    height: 55px;
+
+    &::before {
+      display: none;
+    }
+  }
+}

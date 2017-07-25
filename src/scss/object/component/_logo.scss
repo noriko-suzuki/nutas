@@ -1,0 +1,58 @@
+$path-logo: '../img/common/logo';
+
+%logo {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.c-logo--largeNutas {
+  @extend %logo;
+  width: 135px;
+  height: 166px;
+  background-image: url(#{$path-logo}/logo-nutas.svg);
+}
+
+.c-logo--jda {
+  @extend %logo;
+  width: 250px;
+  height: 32px;
+  background-image: url(#{$path-logo}/logo_jda.png);
+}
+
+.c-logo--nutas {
+  @extend %logo;
+  width: 160px;
+  height: 32px;
+  background-image: url(#{$path-logo}/logo_nutas.png);
+}
+
+
+
+
+
+
+
+
+
+@include sp {
+  .c-logo--largeNutas {
+    width: 90px;
+    height: 110px;
+  }
+
+  .c-logo--jda {
+    width: 179px;
+    height: 23px;
+    background-image: url(#{$path-logo}/sp/logo_jda.png);
+  }
+
+  .c-logo--nutas {
+    width: 105px;
+    height: 23px;
+    background-image: url(#{$path-logo}/sp/logo_nutas.png);
+  }
+}

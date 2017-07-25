@@ -1,0 +1,45 @@
+html {
+  
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  &.is-scroll-disabled {
+
+    .js-body {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: auto;
+  background: #fff;
+  font-family: $font-default;
+  @include font-size(16);
+  color: $color-black;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word; // legacy-name
+
+  height: 100vh;
+  overflow: hidden;
+
+  .is-cover-removed & {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@include sp {
+  body {
+    font-family: $font-sp;
+  }
+}
